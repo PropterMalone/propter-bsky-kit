@@ -1,0 +1,12 @@
+{
+	"$schema": "https://unpkg.com/knip@5/schema.json",
+	"entry": ["scripts/set-bot-label.ts"],
+	"project": ["src/**/*.ts", "scripts/**/*.ts"],
+	"ignoreExportsUsedInFile": true,
+	"includeEntryExports": false,
+	"rules": {
+		"types": "warn",
+		"enumMembers": "warn",
+		"duplicates": "warn"
+	}
+}

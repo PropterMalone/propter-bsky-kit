@@ -1,0 +1,4 @@
+{
+	"entry": ["scripts/set-bot-label.ts"],
+	"ignorePatterns": ["dist/**", "node_modules/**", "**/*.test.ts"]
+}

@@ -1,0 +1,49 @@
+{
+	"name": "propter-bsky-kit",
+	"version": "0.1.0",
+	"description": "Shared infrastructure for building Bluesky bots — posting, DMs, mentions, feeds, rate limiting",
+	"type": "module",
+	"license": "MIT",
+	"author": "PropterMalone",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PropterMalone/propter-bsky-kit.git"
+	},
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": "./dist/index.js",
+		"./grapheme": "./dist/grapheme.js",
+		"./text-splitter": "./dist/text-splitter.js",
+		"./agent": "./dist/agent.js",
+		"./posting": "./dist/posting.js",
+		"./mentions": "./dist/mentions.js",
+		"./dm": "./dist/dm.js",
+		"./gates": "./dist/gates.js",
+		"./thread-reader": "./dist/thread-reader.js",
+		"./rate-limiter": "./dist/rate-limiter.js",
+		"./retry": "./dist/retry.js",
+		"./feed-handler": "./dist/feed-handler.js",
+		"./feed-server": "./dist/feed-server.js",
+		"./feed-hub": "./dist/feed-hub.js",
+		"./labeler-client": "./dist/labeler-client.js"
+	},
+	"scripts": {
+		"build": "tsc -b",
+		"test": "vitest run",
+		"lint:dead": "knip && fallow dead-code",
+		"lint:dead:full": "knip && fallow",
+		"validate": "biome check src/ && tsc -b && vitest run && npm run lint:dead",
+		"dev": "vitest"
+	},
+	"dependencies": {
+		"@atproto/api": "^0.13.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.0",
+		"fallow": "2.69.0",
+		"knip": "6.12.2",
+		"typescript": "^5.7.0",
+		"vitest": "^3.0.0"
+	}
+}
